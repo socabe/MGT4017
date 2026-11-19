@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover our subscription plans, recommendations, calendar and support.">
+  <title>Website | Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <a class="logo" href="#home">LOGO</a>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="#login" data-modal="login">Log in</a>
+      <a href="#signup" data-modal="signup">Sign up</a>
+      <a class="work-link" href="#support">Work with us</a>
+    </nav>
+    <form class="search" id="searchForm" role="search">
+      <input id="searchInput" type="search" placeholder="Search" aria-label="Search this website">
+      <button type="submit" aria-label="Submit search">⌕</button>
+    </form>
+    <button class="profile-button" id="profileButton" aria-label="Open account menu">♙</button>
+  </header>
+
+  <main id="home">
+    <section class="top-layout" aria-label="Featured content">
+      <aside class="left-sidebar">
+        <a href="#plans" class="sidebar-link">Subscription plans</a>
+        <a href="#socials" class="sidebar-small">socials</a>
+        <a href="#about" class="about-link">About us</a>
+      </aside>
+
+      <div class="feature-column">
+        <div class="hero-image image-frame">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85" alt="Bright modern creative workspace">
+        </div>
+        <h1 class="section-heading">Recommendations</h1>
+        <div class="recommendation-grid">
+          <article class="recommendation-card">
+            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=85" alt="A welcoming shared workspace">
+            <h2>Explore opportunities</h2>
+            <p>Discover ideas and opportunities selected for you.</p>
+            <a href="#support" class="text-link">Find out more</a>
+          </article>
+          <article class="recommendation-card">
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=85" alt="A bright desk and office space">
+            <h2>Popular resources</h2>
+            <p>Browse useful resources and featured content.</p>
+            <a href="#support" class="text-link">Find out more</a>
+          </article>
+        </div>
+      </div>
+
+      <aside class="right-sidebar">
+        <a href="#calendar">Calendar</a>
+      </aside>
+    </section>
+
+    <section class="calendar-section" id="calendar">
+      <div>
+        <p class="eyebrow">Stay up to date</p>
+        <h2>Calendar</h2>
+        <p>Keep track of upcoming dates, events and activities.</p>
+      </div>
+      <div class="calendar-box">
+        <div class="calendar-top">
+          <button id="prevMonth" aria-label="Previous month">‹</button>
+          <strong id="monthLabel">Month Year</strong>
+          <button id="nextMonth" aria-label="Next month">›</button>
+        </div>
+        <div class="calendar-grid" id="calendarGrid" aria-label="Calendar dates"></div>
+      </div>
+    </section>
+
+    <section class="plans-section" id="plans">
+      <p class="eyebrow">Choose what works for you</p>
+      <h2>Subscription plans</h2>
+      <div class="plan-grid">
+        <article class="plan-card">
+          <h3>Basic</h3><p class="price">Free</p>
+          <p>Access to selected content and updates.</p>
+          <a class="button button-outline" href="#signup" data-modal="signup">Get started</a>
+        </article>
+        <article class="plan-card featured-plan">
+          <span class="popular-label">Popular</span>
+          <h3>Premium</h3><p class="price">£9.99 <small>/ month</small></p>
+          <p>Enjoy additional resources and exclusive features.</p>
+          <a class="button" href="#signup" data-modal="signup">Choose plan</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="support-section" id="support">
+      <div>
+        <p class="eyebrow">We're here to help</p>
+        <h2>Support</h2>
+        <p>Have a question or need help? Get in touch with our team.</p>
+        <a class="button" href="mailto:hello@example.com">Contact support</a>
+      </div>
+      <div class="support-image">
+        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85" alt="Team members working together">
+      </div>
+    </section>
+  </main>
+
+  <footer id="socials">
+    <a class="footer-logo" href="#home">LOGO</a>
+    <p>Discover more. Stay connected.</p>
+    <div class="footer-links"><a href="#about">About us</a><a href="#plans">Subscription plans</a><a href="#support">Support</a></div>
+    <p class="copyright">© <span id="year"></span> Your Website. All rights reserved.</p>
+  </footer>
+
+  <dialog id="accountDialog" class="account-dialog">
+    <form method="dialog" class="dialog-close"><button aria-label="Close dialog">×</button></form>
+    <h2 id="dialogTitle">Welcome</h2>
+    <p id="dialogText">Enter your details to continue.</p>
+    <form id="accountForm">
+      <label for="email">Email address</label>
+      <input id="email" type="email" placeholder="you@example.com" required>
+      <label for="password">Password</label>
+      <input id="password" type="password" minlength="6" placeholder="At least 6 characters" required>
+      <button class="button" type="submit">Continue</button>
+    </form>
+    <p class="demo-note">Demo form only. Connect an authentication service to create real accounts.</p>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
